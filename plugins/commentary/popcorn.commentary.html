@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popcorn Audio Commentary Demo</title>
+  <script src="../../popcorn.js"></script>
+  <script src="popcorn.audiocommentary.js"></script>
+  <script>
+    document.addEventListener( "DOMContentLoaded", function() {
+      var p = Popcorn( "#video" )
+        .commentary({
+          start: 5,
+          end: 10,
+          src: [
+            "../../test/italia.mp4",
+            "../../test/italia.ogg"
+          ]
+        });
+    }, false );
+  </script>
+</head>
+<body>
+  <h1>Popcorn Audio Commentary Demo</h1>
+  <p>You'll need to have your speakers on to see this plugin work. It will play audio commentary from 5s to 10s</p>
+  <video id="video" preload="auto" controls>
+    <source src="../../test/trailer.mp4">
+    <source src="../../test/trailer.webm">
+    <p>Your user agent does not support the HTML5 Video element.</p>
+  </video>
+</body>
+</html>
